@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>포코 캐릭터 퀴즈 2번</title>
+  <style>
+    body { background: #f0f4f8; font-family: 'Pretendard', 'Noto Sans KR', sans-serif; margin: 0; }
+    .container { max-width: 480px; margin: 60px auto; background: #fff; border-radius: 18px; padding: 36px; box-shadow: 0 2px 12px #0001; }
+    img { display: block; margin: 0 auto 32px auto; max-width: 220px; }
+    h2 { color: #0BAB8B; text-align: center; margin-bottom: 20px; font-size: 1.5rem;}
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin: 32px 0 0 0;
+      align-items: stretch;
+    }
+    .option {
+      background: #f6fcfa;
+      border: 1.5px solid #0bab8b55;
+      border-radius: 13px;
+      color: #222;
+      font-size: 1.15rem;
+      font-weight: 500;
+      padding: 19px 0;
+      text-align: center;
+      transition: background 0.19s, color 0.16s, box-shadow 0.16s;
+      cursor: pointer;
+      width: 100%;
+      min-height: 56px;
+      box-shadow: 0 1px 4px #0bab8b11;
+      outline: none;
+      letter-spacing: 0.02em;
+      /* 고정 너비를 쓰고 싶으면 width: 100%; 지우고 width: 340px; 등으로도 가능 */
+    }
+    .option:hover, .option:focus {
+      background: #0BAB8B;
+      color: #fff;
+      font-weight: bold;
+      box-shadow: 0 2px 8px #0bab8b33;
+      border-color: #0BAB8B;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Q2. 이 캐릭터의 이름은 무엇인가요?</h2>
+    <img src="2. quiz.png" alt="포코타 문제 이미지">
+    <div class="options">
+      <button class="option" onclick="goAnswer('포코타')">포코타</button>
+      <button class="option" onclick="goAnswer('코코')">코코</button>
+      <button class="option" onclick="goAnswer('오비스')">오비스</button>
+      <button class="option" onclick="goAnswer('펭')">펭</button>
+    </div>
+  </div>
+  <script>
+    function goAnswer(selected) {
+      location.href = "answer2.html?choice=" + encodeURIComponent(selected);
+    }
+  </script>
+</body>
+</html>
